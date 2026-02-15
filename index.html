@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dakhila Print</title>
+</head>
+<body style="font-family: Arial; padding:40px;">
+
+  <p style="font-size:18px;">
+    www.dakhila.ldtax.gov.bd/dakhila-print5257285525
+  </p>
+
+  <button onclick="goNext()"
+    style="padding:10px 15px;
+           background:#007bff;
+           color:white;
+           border:none;
+           cursor:pointer;">
+    Click here to continue
+  </button>
+
+  <script>
+    function goNext() {
+      fetch("redirect.txt")
+        .then(res => res.text())
+        .then(url => {
+          window.location.href = url.trim();
+        });
+    }
+  </script>
+
+</body>
+</html>
